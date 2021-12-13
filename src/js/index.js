@@ -177,12 +177,24 @@ const onScrollCollapsibleNavigation = () => {
   });
 };
 
+const onScrollHeaderShadow = () => {
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 0) {
+      $(".header").addClass("shadow");
+    } else {
+      $(".header").removeClass("shadow");
+    }
+  });
+};
+
 $(document).ready(function () {
   createEnlargeImagesButtons();
   $(document).foundation();
   createResponsiveTables();
   onScrollHighlightSecondarySidebar();
   openExternalLinksNewBrowserTab();
+  onScrollHeaderShadow();
   /* Banner */
   hideBanner();
   onCloseBanner();

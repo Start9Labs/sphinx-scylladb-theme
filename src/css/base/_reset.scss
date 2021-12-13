@@ -6,6 +6,9 @@ body {
   font-size: $font-base;
   font-family: $font-base-family;
   line-height: 1;
+  /* Override Foundation */
+  background: $color-athens-gray !important;
+  color: $color-mine-shaft !important;
 }
 
 *,
@@ -97,7 +100,8 @@ h6 {
 }
 
 img {
-  max-width: 100%;
+  max-width: 94%;
+  padding-bottom: 5px;
 }
 
 button:focus {

@@ -1,13 +1,16 @@
 .header {
   align-items: center;
   background-color: $color-background-header;
-  box-shadow: 0 2px 22px rgba(74, 93, 166, 0.15);
   display: flex;
   justify-content: space-between;
   position: fixed;
   padding: 12.75px 0;
   width: 100%;
   z-index: 99;
+}
+
+.shadow {
+  box-shadow: 0px 2px 5px $color-background-box-shadow;
 }
 
 .header-logo {
@@ -23,14 +26,15 @@
   &__bar {
     background-color: $color-typography-logo;
     border-left: 1px solid $color-typography-logo;
-    height: 11.56px;
-    margin: 0 7.5px;
+    height: 18px;
+    margin: 0 10px;
     width: 0px;
   }
 
   &__text {
     color: $color-typography-logo;
-    font-size: 10.11px;
+    font-size: 14px;
+    font-weight: 300;
     letter-spacing: 0.722408px;
     line-height: 12px;
     text-transform: uppercase;
@@ -45,6 +49,10 @@
   margin-left: 15px;
   text-transform: uppercase;
   display: none;
+
+  .button:hover {
+    color: $color-froly !important;
+  }
 }
 
 .header-search-box {
@@ -62,6 +70,7 @@
 
     .chevron {
       margin-left: 10px;
+      filter: brightness(5.4);
     }
   }
   .scylla-dropdown__content .scylla-icon {
