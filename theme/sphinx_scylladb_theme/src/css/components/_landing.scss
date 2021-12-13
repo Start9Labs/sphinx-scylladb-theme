@@ -1,0 +1,22 @@
+.landing {
+  &__content {
+    padding: 0 16px;
+  }
+
+  &--floating {
+    background: $color-silver;
+    margin-bottom: -32px;
+  }
+}
+
+@media screen and (min-width: $large) {
+  .landing {
+    &--floating {
+      margin-bottom: -15px;
+      .landing__content {
+        position: relative;
+        top: -70px;
+      }
+    }
+  }
+}
