@@ -20,13 +20,14 @@
     align-items: center;
     display: flex !important;
     position: initial !important;
+    letter-spacing: 1.5px;
     &:after {
       display: none !important;
     }
 
     .chevron {
       min-height: 5px;
-      width: 10px;
+      width: 12px;
     }
   }
 

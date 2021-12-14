@@ -8,14 +8,15 @@ readme = "PYPI.rst"
 
 [tool.poetry.dependencies]
 python = "^3.7"
-sphinx-collapse = "^0.1.1"
-sphinx-copybutton = ">=0.4,<0.6"
-sphinx-notfound-page = "^0.8"
-beautifulsoup4 = "^4.10.0"
-sphinx-tabs = "^3.2.0"
-Sphinx = "^4.3.2"
-pyyaml = "^6.0"
-Sphinx-Substitution-Extensions = "^2022.2.16"
+pyyaml = "^5.3"
+sphinx-copybutton = "^0.2.8"
+Sphinx = "^2.4.4"
+sphinx-multiversion-scylla = "^0.2.4"
+sphinx-notfound-page = "^0.6"
+recommonmark = "0.5.0"
+beautifulsoup4 = "^4.9.3"
+sphinx-tabs = "^3.1.0"
+sphinxcontrib-youtube = "^1.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
