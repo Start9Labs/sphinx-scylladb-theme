@@ -3,7 +3,8 @@
   vertical-align: middle;
   background-repeat: no-repeat;
   background-size: contain;
-  filter: brightness(0);
+  filter: invert(17%) sepia(1%) saturate(0%) hue-rotate(214deg) brightness(88%)
+    contrast(81%);
 
   &--apps {
     background-image: url("../img/icons/icon-apps.svg");
@@ -23,6 +24,10 @@
 
   &--benchmarks {
     background-image: url("../img/icons/icon-benchmarks.svg");
+  }
+
+  &--bitcoin {
+    background-image: url("../img/icons/bitcoin.svg");
   }
 
   &--blog {

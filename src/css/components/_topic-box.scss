@@ -49,6 +49,7 @@
     position: relative;
     padding: 20px;
     font-size: 18px;
+    background: $color-athens-gray;
 
     &:hover {
       color: $color-typography-base;
@@ -109,6 +110,7 @@
 
     i {
       filter: brightness(0);
+      opacity: 0.87;
       min-height: 50px;
       width: 50px;
     }
