@@ -4,7 +4,7 @@ window.jQuery = $;
 window.$ = $;
 
 require("../css/main.scss");
-require("foundation-sites/dist/js/foundation");
+let Foundation = require("foundation-sites/dist/js/foundation");
 
 const openExternalLinksNewBrowserTab = () => {
   const isExternal = new RegExp("^(?:[a-z]+:)?//", "i");
