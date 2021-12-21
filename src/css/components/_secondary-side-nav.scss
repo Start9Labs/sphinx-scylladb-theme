@@ -34,7 +34,8 @@
           content: "";
           @extend .scylla-icon;
           @extend .scylla-icon--chevron-right;
-          filter: invert(25%) sepia(100%) saturate(2574%) hue-rotate(216deg) brightness(102%) contrast(95%) !important;
+          filter: invert(25%) sepia(100%) saturate(2574%) hue-rotate(216deg)
+            brightness(102%) contrast(95%) !important;
           flex-shrink: 0;
           opacity: 0.5;
           min-height: 10px;
