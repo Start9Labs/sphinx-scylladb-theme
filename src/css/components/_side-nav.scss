@@ -76,6 +76,10 @@
       padding: 0;
       padding-bottom: 24px;
 
+      &:before {
+        content: "" !important;
+      }
+
       &.has-children {
         display: flex;
         align-items: center;
