@@ -66,9 +66,8 @@
 
 @media screen and (min-width: $medium) {
   .hero {
-    padding: 60px 16px;
-
-    &__title {
+    // padding: 60px 16px;
+    padding: 50px 16px 60px 16px &__title {
       font-size: 48px;
       line-height: 42px;
       max-width: 765px;
@@ -86,7 +85,8 @@
       padding-bottom: 30px;
 
       img {
-        width: 550px;
+        // width: 550px; // for EOS computer image
+        width: 275px; // for docs icon image
         height: 100%;
         filter: brightness(0.87);
       }
