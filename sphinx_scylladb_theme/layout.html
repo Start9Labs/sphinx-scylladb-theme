@@ -127,9 +127,41 @@
 
     {%- endblock %}
 
-    <body>
-        {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %}
-            {% include 'promo-banner.html' %}
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/b1870adf6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- End Font Awesome -->
+    <!-- Docsearch -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css"
+    />
+  </head>
+  {% set hide_sidebar = pagename == master_doc and
+  theme_hide_sidebar_index|lower == 'true' %}
+  <body>
+    {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
+    include 'promo-banner.html' %} {% endif %} {% include 'header.html'%}
+    <section class="layout {{'layout--full-width' if hide_sidebar}}">
+      <div class="content large-order-2">
+        {% if pagename != master_doc %} {% if versions and current_version and
+        latest_version and current_version != latest_version %}
+
+        <div class="admonition caution">
+          <p class="admonition-title">Caution</p>
+          <p>
+            You are not reading the latest stable version of this documentation.
+            If you want up-to-date information, please have a look at
+            <a href="{{ vpathto(latest_version.name) }}">
+              {% if latest_version in versions.branches %} {{
+              latest_version.name | replace(theme_branch_substring_removed, '')
+              }}{% else %} {{ latest_version.name |
+              replace(theme_tag_substring_removed, '') }}{% endif %}</a
+            >.
+          </p>
+        </div>
         {% endif %}
         {% include 'header.html'%}
         <section class="layout {{'layout--full-width' if full_width}} {{'landing landing--floating' if landing}}">
@@ -171,5 +203,20 @@
         </noscript>
     </body>
 
+    <script src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
+    <script>
+      docsearch({
+        inputSelector: '#searchbar',
+        typesenseCollectionName: 'start9_docs',
+        typesenseServerConfig: { 
+          nodes: [{
+            host: 'localhost',
+            port: '8108',
+            protocol: 'http'
+          }],
+          apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
+        },
+      });
+    </script>
   </body>
 </html>

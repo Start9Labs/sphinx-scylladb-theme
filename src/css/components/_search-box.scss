@@ -1,17 +1,15 @@
-/* This stylesheet uses the !important operator
-   to overwrite expertrec custom CSS rules.
-*/
+/* Overwrite docsearch */
 .search-box {
   background: $color-background-search-box;
   border-radius: 4px;
   display: flex;
-  padding: 10px 15px;
+  padding: 5px 7px;
 
   &:before {
     content: "";
     display: inline-block;
     vertical-align: middle;
-    margin-top: 2px;
+    margin: 10px 8px 0px 3px;
     background-repeat: no-repeat;
     background-size: contain;
     min-height: 18px;
@@ -21,26 +19,57 @@
     filter: brightness(0.86);
   }
 
-  ci-search,
-  .er-dummy-search,
-  .er-dummy-search-box,
-  .er-search-form {
+  .algolia-autocomplete {
     width: 100% !important;
     margin: 0 !important;
   }
 
   input {
     background: transparent !important;
-    color: rgba(80, 80, 80, 0.5) !important;
-    font-size: $font-small !important;
+    color: rgba(80, 80, 80, 0.7) !important;
+    font-size: $font-base !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+
+    &:focus {
+      outline: none !important;
+    }
 
     &::placeholder {
       color: rgba(80, 80, 80, 0.5) !important;
       opacity: 1 !important;
     }
+  }
+
+  .algolia-autocomplete .ds-dropdown-menu {
+    width: 500px;
+  }
+
+  .algolia-autocomplete .typesense-docsearch-suggestion--category-header {
+    color: $color-boulder;
+    border: 1px solid $color-gray;
+  }
+
+  .algolia-autocomplete .typesense-docsearch-suggestion--subcategory-column {
+    color: $color-gray;
+  }
+
+  .algolia-autocomplete .typesense-docsearch-suggestion--title {
+    font-weight: bold;
+    color: $color-mine-shaft;
+  }
+
+  .algolia-autocomplete .typesense-docsearch-suggestion--text {
+    font-size: 0.8rem;
+    color: $color-gray;
+  }
+
+  .algolia-autocomplete .typesense-docsearch-suggestion--highlight {
+    color: $color-froly;
   }
 
   button {
@@ -71,7 +100,7 @@
   }
 }
 
-/* Results page*/
+/* Results page - TODO adjust for docsearch*/
 .er-search-content {
   padding: 20px !important;
 }
