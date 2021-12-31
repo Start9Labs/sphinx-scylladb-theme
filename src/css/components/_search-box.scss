@@ -51,7 +51,8 @@
 
   .algolia-autocomplete .typesense-docsearch-suggestion--category-header {
     color: $color-boulder;
-    border: 1px solid $color-gray;
+    border: none !important;
+    font-weight: 500 !important;
   }
 
   .algolia-autocomplete .typesense-docsearch-suggestion--subcategory-column {
@@ -74,96 +75,5 @@
 
   button {
     display: none !important;
-  }
-}
-
-.er_search_suggestions {
-  @include floating;
-  border: 0 !important;
-
-  .er-search-result-box {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
-    border-width: 1px !important;
-
-    &:hover {
-      background: $color-background-search-item-hover !important;
-    }
-  }
-
-  .er_more_result_btn {
-    cursor: pointer;
-  }
-
-  h3 {
-    font-size: $font-base !important;
-  }
-}
-
-/* Results page - TODO adjust for docsearch*/
-.er-search-content {
-  padding: 20px !important;
-}
-
-#er_search_results {
-  .er-search-result-box {
-    margin: 0 auto !important;
-    margin-top: 10px !important;
-    display: block !important;
-  }
-
-  .text {
-    width: 100% !important;
-  }
-}
-
-#search-result-input-form {
-  max-width: 800px !important;
-}
-
-#er_search_button {
-  text-align: center !important;
-}
-
-#er_clear_input {
-  top: 0 !important;
-  right: 0 !important;
-}
-
-.er-facet-header {
-  background-color: transparent !important;
-  border: 0 !important;
-}
-
-.er-facet-val {
-  padding: 5px 2px !important;
-}
-
-/* Mobile */
-.er-suggestion-sm {
-  .er_search_input_dummy {
-    margin: 0 !important;
-  }
-  .er_search_button_dummy {
-    border: 0 !important;
-  }
-}
-
-@media screen and (min-width: $medium) {
-  .er-facets {
-    display: none;
-    width: initial !important;
-    min-width: initial !important;
-    max-width: 300px !important;
-  }
-}
-
-@media screen and (min-width: $xlarge) {
-  .er-facets {
-    display: block;
-    position: fixed !important;
-  }
-  .er-facet-count {
-    display: none;
   }
 }
