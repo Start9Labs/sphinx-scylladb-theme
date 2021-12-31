@@ -45,7 +45,7 @@ $color-blue-ribbon: #1c67f9;
 
 /* Background */
 $color-background-banner: $color-blue-ribbon;
-$color-background-code: $color-porcelain;
+$color-background-code: $color-mine-shaft;
 $color-background-dropdown-contribute: $color-athens-gray;
 $color-background-footer: $color-mine-shaft;
 $color-background-header: $color-mine-shaft;
@@ -76,8 +76,8 @@ $color-border-topic-box-hover: $color-froly;
 $color-border-toc-local-li: transparentize($color-mine-shaft, 0.9);
 
 /* Typography */
-$color-typography-admonition-text: transparentize($color-mine-shaft, 0.7);
-$color-typography-admonition-title: $color-froly;
+$color-typography-admonition-text: transparentize($color-mine-shaft, 0.1);
+$color-typography-admonition-title: $color-mine-shaft;
 $color-typography-banner-title: $color-athens-gray;
 $color-typography-base-link: $color-froly;
 $color-typography-base: $color-mine-shaft;
@@ -86,7 +86,7 @@ $color-typography-breadcrumbs-highlight: $color-froly;
 $color-typography-bullet: $color-boulder;
 $color-typography-button: $color-athens-gray;
 $color-typography-code-line-number: $color-blue-bayoux;
-$color-typography-code: $color-froly;
+$color-typography-code: $color-apple;
 $color-typography-content-navigation-text: $color-boulder;
 $color-typography-content-navigation-title-colored: $color-froly;
 $color-typography-dropdown: $color-froly;
