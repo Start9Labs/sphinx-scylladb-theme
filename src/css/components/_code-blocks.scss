@@ -28,7 +28,16 @@ code {
   a.copybtn {
     right: 1em;
     top: 1em;
+
+    img {
+      filter: brightness(3);
+    }
   }
+}
+
+.o-tooltip--left:after {
+  background: $color-athens-gray;
+  color: $color-mine-shaft;
 }
 
 .highlighttable {
@@ -72,6 +81,6 @@ code {
   }
 }
 
-.hide-copy-button .copybtn {
-  display: none;
+a.copybtn img:hover {
+  // filter: brightness(0);
 }
