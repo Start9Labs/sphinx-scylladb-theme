@@ -62,6 +62,7 @@
   {%- endif %} {%- endfor %} {%- endmacro %}
 
   <head>
+    <meta name="docsearch:language" content="en" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -117,7 +118,7 @@
   <body>
     {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
     include 'promo-banner.html' %} {% endif %} {% include 'header.html'%}
-    <section class="layout {{'layout--full-width' if hide_sidebar}}">
+    <section class="DocSearch-content layout {{'layout--full-width' if hide_sidebar}}">
       <div class="content large-order-2">
         {% if pagename != master_doc %} {% if versions and current_version and
         latest_version and current_version != latest_version %}
@@ -161,19 +162,21 @@
     {% include 'footer.html' %}
 
     <script src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
-    <script>
-      docsearch({
-        inputSelector: '#searchbar',
-        typesenseCollectionName: 'start9_docs',
-        typesenseServerConfig: { 
-          nodes: [{
-            host: 'localhost',
-            port: '8108',
-            protocol: 'http'
-          }],
-          apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
-        },
-      });
-    </script>
+  <script>
+    docsearch({
+      container: '#searchcontainer',
+      inputSelector: '#searchbar',
+      typesenseCollectionName: 'start9_docs',
+      typesenseServerConfig: { 
+        nodes: [{
+          host: 'docs.start9labs.com',
+          port: '8108',
+          protocol: 'https'
+        }],
+        apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
+      },
+      debug: true,
+    });
+  </script>
   </body>
 </html>
