@@ -177,6 +177,20 @@
       },
       debug: true,
     });
+    docsearch({
+      container: '#searchcontainer_sidenav',
+      inputSelector: '#searchbar_sidenav',
+      typesenseCollectionName: 'start9_docs',
+      typesenseServerConfig: { 
+        nodes: [{
+          host: 'docs.start9labs.com',
+          port: '8108',
+          protocol: 'https'
+        }],
+        apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
+      },
+      debug: true,
+    });
   </script>
   </body>
 </html>
