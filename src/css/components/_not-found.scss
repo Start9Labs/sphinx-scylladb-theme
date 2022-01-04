@@ -2,6 +2,7 @@
   background-color: $color-background-not-found;
   height: 100%;
   overflow: hidden;
+  padding: 9rem;
 
   &__icon {
     display: block;
@@ -25,5 +26,14 @@
 
   &__button {
     text-transform: uppercase;
+    background: $color-froly;
+    color: $color-athens-gray;
+
+    &:hover,
+    &:focus {
+      color: $color-athens-gray;
+      background: $color-froly;
+      // opacity: 85% !important;
+    }
   }
 }
