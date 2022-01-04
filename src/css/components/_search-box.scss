@@ -81,7 +81,7 @@
   .algolia-autocomplete
     .typesense-docsearch-suggestion--text
     .typesense-docsearch-suggestion--highlight {
-    box-shadow: inset 0 -2px 0 0 $color-blue-ribbon;
+    box-shadow: inset 0 -2px 0 0 rgb(28, 103, 249 / 80%);
   }
 
   @media screen and (min-width: $medium) {
