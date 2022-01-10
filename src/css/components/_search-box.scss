@@ -110,4 +110,17 @@
       max-width: calc(100vw - 70rem);
     }
   }
+
+  @media screen and (min-width: $xxxlarge) {
+    .algolia-autocomplete .ds-dropdown-menu {
+      min-width: calc(100vw - 85rem);
+      max-width: calc(100vw - 85rem);
+    }
+  }
+  @media screen and (min-width: $xxxxlarge) {
+    .algolia-autocomplete .ds-dropdown-menu {
+      min-width: calc(100vw - 110rem);
+      max-width: calc(100vw - 110rem);
+    }
+  }
 }
