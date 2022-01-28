@@ -105,7 +105,11 @@
     .section {
       margin-top: -$header-height-large;
       padding-top: $header-height-large;
-      scroll-margin-top: $gap;
+      scroll-margin-top: $header-height-large;
+
+      span {
+        scroll-margin-top: calc(#{$header-height-large} + #{$gap});
+      }
     }
   }
 
