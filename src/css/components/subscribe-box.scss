@@ -1,0 +1,41 @@
+.subscribe {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: $gap;
+  padding: 5rem;
+
+  &__heading {
+    &-subheading {
+      font-size: 26px;
+      font-variant: small-caps;
+      line-height: 1.67;
+      letter-spacing: 3px;
+      font-weight: 300;
+    }
+  }
+
+  &-form {
+    // font-size: 1.3rem;
+    display: block;
+    margin: 15px auto;
+    max-width: 50%;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+  }
+  input,
+  textarea {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 576px) {
+    form {
+      display: inline;
+    }
+  }
+}
