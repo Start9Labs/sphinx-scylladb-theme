@@ -32,7 +32,8 @@ const createResponsiveTables = () => {
 };
 
 const createEnlargeImagesButtons = () => {
-  $(".content img[width]").each(function () {
+  // first condition only accounts for svg files, second condition expands upon way sphinx adds attributes to svg files vs other image types, source: sphinx/writers/html5.py:541
+  $(".content img[width], .content img[style]").each(function () {
     // Update parent css
     const reveal_id = (Math.random() + 1).toString(36).substring(7);
     $(this).wrap(
