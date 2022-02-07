@@ -15,15 +15,18 @@
     background: transparent;
     color: $color-typography-button;
     text-decoration: none;
+    cursor: pointer;
   }
 
   &--reverse {
-    border: 0;
-    background: $color-athens-gray;
+    border: 1px solid $color-froly;
+    background: $color-froly;
+    color: $color-athens-gray;
 
     &:hover,
     &:focus {
-      background: $color-athens-gray;
+      opacity: 0.8;
+      cursor: pointer;
     }
   }
 }
