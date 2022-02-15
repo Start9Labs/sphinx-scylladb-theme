@@ -15,8 +15,15 @@
     }
   }
 
+  &-input {
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .button--reverse {
+    border-radius: 0px 4px 4px 0px;
+  }
+
   &-form {
-    // font-size: 1.3rem;
     display: block;
     margin: 15px auto;
     max-width: 50%;
@@ -25,7 +32,6 @@
 
   form {
     display: flex;
-    // align-items: center;
     justify-content: center;
   }
   input,
@@ -36,6 +42,14 @@
   @media screen and (max-width: 576px) {
     form {
       display: inline;
+    }
+    .subscribe-input{
+      margin-bottom: 0.5rem;
+      border-radius: 4px;
+    }
+    .button--reverse {
+      padding: 0.5rem;
+      border-radius: 4px;
     }
   }
 }
