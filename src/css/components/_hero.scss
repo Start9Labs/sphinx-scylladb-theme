@@ -64,7 +64,7 @@
   position: relative;
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
   .hero {
     padding: 60px 16px;
 
@@ -83,12 +83,10 @@
     &__img {
       display: block;
       position: initial;
-      padding-bottom: 30px;
 
       img {
         width: 550px;
         height: 100%;
-        filter: brightness(0.87);
       }
     }
 
@@ -102,7 +100,7 @@
   }
 }
 
-@media screen and (max-width: $small) {
+@media screen and (max-width: $large) {
   .hero__title {
     max-width: none;
     margin-top: 14px;
@@ -111,10 +109,5 @@
 
   .hero__img img {
     display: none;
-  }
-}
-@media screen and (max-width: $x-small) {
-  .header-logo__text {
-    font-size: 11px;
   }
 }
