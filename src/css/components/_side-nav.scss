@@ -151,7 +151,7 @@
   bottom: 10px;
   display: none;
   font-size: 0px;
-  left: 226px;
+  left: calc(#{$side-nav-width} - 53px);
   padding: 13.5px;
   position: fixed;
   cursor: pointer;
