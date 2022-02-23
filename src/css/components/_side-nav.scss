@@ -144,33 +144,33 @@
   }
 }
 
-.collapsible-button {
-  @include floating;
-  background-color: $color-white;
-  border-radius: 50%;
-  bottom: 10px;
-  display: none;
-  font-size: 0px;
-  left: calc(#{$side-nav-width} - 53px);
-  padding: 13.5px;
-  position: fixed;
-  cursor: pointer;
+// .collapsible-button {
+//   @include floating;
+//   background-color: $color-white;
+//   border-radius: 50%;
+//   bottom: 10px;
+//   display: none;
+//   font-size: 0px;
+//   left: calc(#{$side-nav-width} - 53px);
+//   padding: 13.5px;
+//   position: fixed;
+//   cursor: pointer;
 
-  i {
-    @extend .scylla-icon--expand;
-    height: 16px;
-    width: 16px;
-    margin: 0;
-  }
-}
+//   i {
+//     @extend .scylla-icon--expand;
+//     height: 16px;
+//     width: 16px;
+//     margin: 0;
+//   }
+// }
 
-.side-nav--collapsed .collapsible-button {
-  left: -10px;
-  border-radius: 0 20px 20px 0;
-  i {
-    transform: rotate(180deg);
-  }
-}
+// .side-nav--collapsed .collapsible-button {
+//   left: -10px;
+//   border-radius: 0 20px 20px 0;
+//   i {
+//     transform: rotate(180deg);
+//   }
+// }
 
 .layout--has-banner .side-nav {
   max-height: calc(100vh - #{$promo-banner-header-height});
@@ -186,7 +186,7 @@
     padding: 30px 40px;
     top: $header-height-large;
     left: initial;
-    width: $secondary-side-nav-width;
+    width: $side-nav-width;
     z-index: 25;
 
     &__content {
@@ -201,33 +201,13 @@
     &__versions {
       max-width: 100%;
     }
-  }
 
-  .toctree-checkbox {
-    right: 40px;
-  }
-
-  .layout--has-banner .side-nav {
-    max-height: calc(100vh - #{$promo-banner-header-height-large});
-  }
-}
-
-@media screen and (min-width: $xlarge) {
-  .side-nav {
-    width: $side-nav-width;
-
-    &--collapsed {
-      background-color: transparent;
-      padding-left: 0;
-      padding-right: 0;
-      width: $side-nav-width-collapsed;
-      .side-nav-content {
-        display: none;
-      }
+    .toctree-checkbox {
+      right: 40px;
     }
-  }
 
-  .collapsible-button {
-    display: block;
+    .layout--has-banner .side-nav {
+      max-height: calc(100vh - #{$promo-banner-header-height-large});
+    }
   }
 }

@@ -32,14 +32,12 @@
   }
 
   &__close {
-    display: none;
     position: absolute;
     right: 16px;
-    top: 16px;
 
     .scylla-icon {
-      height: 34px;
-      width: 34px;
+      height: 24px;
+      width: 24px;
       filter: brightness(100%);
     }
 
@@ -54,7 +52,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 5.85px 20px;
+  padding: 6px 20px;
 }
 
 @media (min-width: $large) {

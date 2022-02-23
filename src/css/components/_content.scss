@@ -55,6 +55,12 @@
   .inline-icon.fa-check {
     color: $color-typography-icon-checkmark;
   }
+
+  .section {
+    .video_wrapper {
+      padding-bottom: 20px;
+    }
+  }
 }
 
 .layout--full-width .content {
@@ -96,11 +102,12 @@
 @media screen and (min-width: $large) {
   .content {
     min-height: calc(100vh - (#{$footer-height} + #{$header-height-large}));
+    padding: 40px 40px 100px 40px;
     padding-bottom: 100px;
-    margin-left: $secondary-side-nav-width;
+    margin-left: $side-nav-width;
     margin-top: $header-height-large;
     scroll-margin-top: $header-height-large;
-    width: calc(100% - #{$secondary-side-nav-width});
+    width: calc(100% - (#{$side-nav-width} + #{$secondary-side-nav-width}));
 
     .section {
       margin-top: -$header-height-large;
@@ -126,22 +133,6 @@
     .section {
       margin-top: -$promo-banner-header-height-large;
       padding-top: calc(#{$promo-banner-header-height-large});
-    }
-  }
-}
-
-@media screen and (min-width: $xlarge) {
-  .content {
-    padding: 40px;
-    padding-top: 60px;
-    margin-left: $side-nav-width;
-    width: calc(100% - (#{$side-nav-width} + #{$secondary-side-nav-width}));
-
-    &--collapsed {
-      margin-left: $side-nav-width-collapsed;
-      width: calc(
-        100% - (#{$side-nav-width-collapsed} + #{$secondary-side-nav-width})
-      );
     }
   }
 }
