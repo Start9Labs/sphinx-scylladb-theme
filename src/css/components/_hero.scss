@@ -20,7 +20,7 @@
     font-size: $font-base;
     font-weight: 300;
     letter-spacing: 0.6px;
-    max-width: 343px;
+    max-width: 420px;
     line-height: 26px;
 
     a {
@@ -57,6 +57,7 @@
 }
 
 .hero-wrapper {
+  padding-left: 40px;
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -101,12 +102,6 @@
 }
 
 @media screen and (max-width: $large) {
-  .hero__title {
-    max-width: none;
-    margin-top: 14px;
-    margin-bottom: 24px;
-  }
-
   .hero__img img {
     display: none;
   }

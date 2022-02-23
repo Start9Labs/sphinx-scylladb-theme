@@ -81,7 +81,7 @@ const onScrollHighlightSecondarySidebar = () => {
 const hideBanner = () => {
   const promoBanner = $(".promo-banner");
   const promoBannerHeight = promoBanner.outerHeight();
-  if (promoBanner.length && localStorage.getItem("scylladocs-hide-banner")) {
+  if (promoBanner.length && !localStorage.getItem("start9-hide-banner")) {
     promoBanner.show();
     $("body").css("margin-top", promoBannerHeight);
     $(".side-nav").css("margin-top", promoBannerHeight);
@@ -94,7 +94,8 @@ const hideBanner = () => {
 
 const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
-    localStorage.setItem("scylladocs-hide-banner", "1");
+    console.log("HERE Bitches");
+    localStorage.setItem("start9-hide-banner", "1");
     $("body").css("margin-top", 0);
     $(".side-nav").css("margin-top", 0);
     $(".secondary-side-nav").css("margin-top", 0);
@@ -136,7 +137,7 @@ const collapseNavigation = () => {
     position: "top",
     tipText: "Expand",
   });
-  localStorage.setItem("scylladocs-collapse-side-nav", "1");
+  localStorage.setItem("start9-collapse-side-nav", "1");
   $("#side-nav").addClass("side-nav--collapsed");
   $(".content").addClass("content--collapsed");
 };
@@ -146,13 +147,13 @@ const expandNavigation = () => {
     position: "top",
     tipText: "Collapse",
   });
-  localStorage.setItem("scylladocs-collapse-side-nav", "0");
+  localStorage.setItem("start9-collapse-side-nav", "0");
   $("#side-nav").removeClass("side-nav--collapsed");
   $(".content").removeClass("content--collapsed");
 };
 
 const loadCollapsibleNavigation = () => {
-  if (localStorage.getItem("scylladocs-collapse-side-nav") == "1") {
+  if (localStorage.getItem("start9-collapse-side-nav") == "1") {
     collapseNavigation();
   } else {
     expandNavigation();
