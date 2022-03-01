@@ -57,3 +57,9 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
+
+@media screen and (min-width: $large) {
+  .contents.local {
+    display: none;
+  }
+}
