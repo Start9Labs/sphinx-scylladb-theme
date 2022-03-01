@@ -17,6 +17,30 @@
     overflow-wrap: break-word;
     max-width: 90%;
 
+    // .toctree-l1:nth-child(1):before {
+    //   content: "Company \A";
+    //   white-space: pre;
+    //   letter-spacing: 2px;
+    //   font-variant: all-small-caps;
+    //   font-size: 27px;
+    //   font-weight: bold;
+    //   /* border-bottom: 1px solid $$color-froly; */
+    //   color: $color-royal-blue;
+    //   flex-basis: 100%;
+    // }
+
+    // .toctree-l1:nth-child(5):before {
+    //   content: "Docs \A";
+    //   white-space: pre;
+    //   letter-spacing: 2px;
+    //   font-variant: all-small-caps;
+    //   font-size: 27px;
+    //   font-weight: bold;
+    //   /* border-bottom: 1px solid $$color-froly; */
+    //   color: $color-royal-blue;
+    //   flex-basis: 100%;
+    // }
+
     /* Override icons extension */
     label,
     label i {
@@ -190,7 +214,6 @@
     z-index: 25;
 
     &__content {
-      padding-bottom: $footer-height;
       max-width: 100%;
     }
 
@@ -199,6 +222,7 @@
     }
 
     &__versions {
+      padding-bottom: $footer-height;
       max-width: 100%;
     }
 
