@@ -94,7 +94,6 @@ const hideBanner = () => {
 
 const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
-    console.log("HERE Bitches");
     localStorage.setItem("start9-hide-banner", "1");
     $("body").css("margin-top", 0);
     $(".side-nav").css("margin-top", 0);
