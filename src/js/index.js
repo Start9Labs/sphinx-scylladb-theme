@@ -80,21 +80,31 @@ const onScrollHighlightSecondarySidebar = () => {
 
 const hideBanner = () => {
   const promoBanner = $(".promo-banner");
+  const timestamp = JSON.parse(localStorage.getItem("start9-hide-banner"));
+  const expiry = 168 // one week in hours
   const promoBannerHeight = promoBanner.outerHeight();
-  if (promoBanner.length && !sessionStorage.getItem("start9-hide-banner")) {
-    promoBanner.show();
-    $("body").css("margin-top", promoBannerHeight);
-    $(".side-nav").css("margin-top", promoBannerHeight);
-    $(".secondary-side-nav").css("margin-top", promoBannerHeight);
-    $(".layout").addClass("layout--has-banner");
-  } else {
-    promoBanner.hide();
+  if (timestamp && promoBanner.length) {
+    let now = new Date();
+    let diffInHours = Math.abs(now.getTime() - parseInt(timestamp)) / 36e5;
+    if (diffInHours >= expiry) {
+      localStorage.removeItem("start9-hide-banner");
+      promoBanner.show();
+      $("body").css("margin-top", promoBannerHeight);
+      $(".side-nav").css("margin-top", promoBannerHeight);
+      $(".secondary-side-nav").css("margin-top", promoBannerHeight);
+      $(".layout").addClass("layout--has-banner");
+    } else {
+      promoBanner.hide();
+    }
   }
 };
 
 const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
-    sessionStorage.setItem("start9-hide-banner", "1");
+    localStorage.setItem(
+      "start9-hide-banner",
+      JSON.stringify(new Date().getTime())
+    );
     $("body").css("margin-top", 0);
     $(".side-nav").css("margin-top", 0);
     $(".secondary-side-nav").css("margin-top", 0);
