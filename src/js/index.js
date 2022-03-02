@@ -18,6 +18,15 @@ const openExternalLinksNewBrowserTab = () => {
       $(this).addClass("internal");
     }
   });
+
+  const headerLink = $(".hero-header > a");
+  headerLink.removeClass("internal external");
+  if (isExternal.test(headerLink.attr("href"))) {
+    headerLink.addClass("external");
+    headerLink.attr("target", "_blank");
+  } else {
+    headerLink.addClass("internal");
+  }
 };
 
 const createResponsiveTables = () => {
