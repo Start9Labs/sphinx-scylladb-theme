@@ -50,6 +50,7 @@
   .section {
     margin-top: -$header-height;
     padding-top: $header-height;
+    scroll-margin-top: calc(#{$header-height} + #{$gap});
   }
 
   .inline-icon.fa-check {
@@ -96,7 +97,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 20px 0px 20px 0px;
+
+  &__right {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $large) {
