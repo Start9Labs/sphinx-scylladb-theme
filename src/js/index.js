@@ -123,7 +123,7 @@ const onCloseBanner = () => {
 };
 
 const onResizeBanner = () => {
-  $(window).resize(function () {
+  $(window).on("load resize", function () {
     const promoBanner = $(".promo-banner");
     const promoBannerHeight = promoBanner.outerHeight();
     if (promoBanner.is(":visible")) {
