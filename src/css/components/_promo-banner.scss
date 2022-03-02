@@ -34,7 +34,7 @@
 
   &__close {
     position: absolute;
-    right: 16px;
+    right: 5px;
 
     .scylla-icon {
       height: 24px;
@@ -54,6 +54,7 @@
   display: flex;
   justify-content: center;
   padding: 6px 20px;
+  flex-wrap: wrap;
 }
 
 @media (min-width: $large) {
@@ -68,6 +69,7 @@
       padding: 8.5px;
     }
     &__close {
+      right: 16px;
       display: block;
     }
   }
