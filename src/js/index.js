@@ -81,7 +81,7 @@ const onScrollHighlightSecondarySidebar = () => {
 const hideBanner = () => {
   const promoBanner = $(".promo-banner");
   const promoBannerHeight = promoBanner.outerHeight();
-  if (promoBanner.length && !localStorage.getItem("start9-hide-banner")) {
+  if (promoBanner.length && !sessionStorage.getItem("start9-hide-banner")) {
     promoBanner.show();
     $("body").css("margin-top", promoBannerHeight);
     $(".side-nav").css("margin-top", promoBannerHeight);
@@ -94,7 +94,7 @@ const hideBanner = () => {
 
 const onCloseBanner = () => {
   $(".promo-banner__close").on("click", function () {
-    localStorage.setItem("start9-hide-banner", "1");
+    sessionStorage.setItem("start9-hide-banner", "1");
     $("body").css("margin-top", 0);
     $(".side-nav").css("margin-top", 0);
     $(".secondary-side-nav").css("margin-top", 0);
