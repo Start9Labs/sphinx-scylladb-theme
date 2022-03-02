@@ -81,7 +81,7 @@ const onScrollHighlightSecondarySidebar = () => {
 const hideBanner = () => {
   const promoBanner = $(".promo-banner");
   const timestamp = JSON.parse(localStorage.getItem("start9-hide-banner"));
-  const expiry = 168 // one week in hours
+  const expiry = 168; // one week in hours
   const promoBannerHeight = promoBanner.outerHeight();
   if (timestamp && promoBanner.length) {
     let now = new Date();
