@@ -15,50 +15,46 @@
         {% endfor %}
     {% endmacro %}
     {% macro css() %}
-        <!-- connect to domain of font files -->
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <!-- connect to domain of font files -->
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- optionally increase loading priority -->
-  <link
-    rel="preload"
-    as="style"
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap"
-  />
+      <!-- optionally increase loading priority -->
+      <link
+        rel="preload"
+        as="style"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap"
+      />
 
-  <!-- async CSS -->
-  <link
-    rel="stylesheet"
-    media="print"
-    onload="this.onload=null;this.removeAttribute('media');"
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap"
-  />
+      <!-- async CSS -->
+      <link
+        rel="stylesheet"
+        media="print"
+        onload="this.onload=null;this.removeAttribute('media');"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap"
+      />
 
-  <!-- no-JS fallback -->
-  <noscript>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap"
-    />
-  </noscript>
-  <link
-    rel="stylesheet"
-    href="{{ pathto('_static/css/main.css', 1) }}"
-    type="text/css"
-  />
-  <link
-    rel="stylesheet"
-    href="{{ pathto('_static/pygments.css', 1) }}"
-    type="text/css"
-  />
-  {%- for css in css_files %} {%- if css|attr("filename") %} {{ css_tag(css) }}
-  {%- else %}
+      <!-- no-JS fallback -->
+      <noscript>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,400&display=swap"
+        />
+      </noscript>
+      {% for css in css_files %}
+          {% if css|attr("filename") %}
+              {{ css_tag(css) }}
+          {% else %}
+              <link rel="stylesheet" href="{{ pathto(css, 1) }}" type="text/css" />
+          {% endif %}
+      {% endfor %}
+    {% endmacro %}
 
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width initial-scale=1" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>
-            {% block title %} {{ title|striptags|e }} | Scylla Docs {% endblock %}
+            {% block title %} Start9 | {{ title|striptags|e }} {% endblock %}
         </title>
         <meta name="description" content="{{ theme_site_description }}" />
         <link rel="icon" href="{{ pathto('_static/img/favicon.ico', 1) }}" type="image/x-icon" />
@@ -66,152 +62,92 @@
         <link rel="icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" sizes="192x192" />
         <link rel="apple-touch-icon" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
         <meta name="msapplication-TileImage" href="{{ pathto('_static/img/favicon-228x228.png', 1) }}" />
-        <link rel="canonical" href="https://docs.scylladb.com/" />
-        <link rel="author" href="mailto:info@scylladb.com" />
+        <link rel="canonical" href="https://start9.com/" />
+        <link rel="author" href="mailto:support@start9labs.com" />
 
-  <head>
-    <meta name="docsearch:language" content="en" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>
-      {%- block title %} Start9 | {{ title|striptags|e }} {%- endblock %}
-    </title>
-    <meta name="description" content="{{ theme_site_description }}" />
-    <link
-      rel="icon"
-      href="{{ pathto('_static/img/favicon.ico', 1) }}"
-      type="image/x-icon"
-    />
-    <link
-      rel="icon"
-      href="{{ pathto('_static/img/favicon-32x32.png', 1) }}"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      href="{{ pathto('_static/img/favicon-228x228.png', 1) }}"
-      sizes="192x192"
-    />
-    <link
-      rel="apple-touch-icon"
-      href="{{ pathto('_static/img/favicon-228x228.png', 1) }}"
-    />
-    <meta
-      name="msapplication-TileImage"
-      href="{{ pathto('_static/img/favicon-228x228.png', 1) }}"
-    />
-    <link rel="canonical" href="https://start9.com/" />
-    <link rel="author" href="mailto:support@start9labs.com" />
-
-    {%- endblock %}
+        {% block css %}
+          {{ css() }}
+        {% endblock %}
+        {% block scripts %}
+            {{ script() }}
+        {% endblock %}
 
     <!-- Font Awesome -->
-    <script
-      src="https://kit.fontawesome.com/b1870adf6a.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b1870adf6a.js" crossorigin="anonymous"></script>
     <!-- End Font Awesome -->
     <!-- Docsearch -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css"
-    />
-  </head>
-  {% set hide_sidebar = pagename == master_doc and
-  theme_hide_sidebar_index|lower == 'true' %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.css"/>
+
   <body>
-    {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %} {%
-    include 'promo-banner.html' %} {% endif %} {% include 'header.html'%}
-    <section class="DocSearch-content layout {{'layout--full-width' if hide_sidebar}}">
+    {% if not theme_hide_banner or theme_hide_banner|lower == 'false' %}
+      {% include 'promo-banner.html' %}
+    {% endif %}
+    {% include 'header.html'%}
+    <section class="DocSearch-content layout {{'layout--full-width' if full_width}} {{'landing landing--floating' if landing}}">
       <div class="content large-order-2">
-        {% if pagename != master_doc %} {% if versions and current_version and
-        latest_version and current_version != latest_version %}
-
-        <div class="admonition caution">
-          <p class="admonition-title">Caution</p>
-          <p>
-            You are not reading the latest stable version of this documentation.
-            If you want up-to-date information, please have a look at
-            <a href="{{ vpathto(latest_version.name) }}">
-              {% if latest_version in versions.branches %} {{
-              latest_version.name | replace(theme_branch_substring_removed, '')
-              }}{% else %} {{ latest_version.name |
-              replace(theme_tag_substring_removed, '') }}{% endif %}</a
-            >.
-          </p>
-        </div>
+        {% if not hide_version_warning %}
+          {% include 'version-warning.html'%}
         {% endif %}
-        {% include 'header.html'%}
-        <section class="layout {{'layout--full-width' if full_width}} {{'landing landing--floating' if landing}}">
-            <div class="content large-order-2">
-                {% if not hide_version_warning %}
-                    {% include 'version-warning.html'%}
-                {% endif %}
-                {% if not hide_pre_content %}
-                    <div class="pre-content">
-                        {% include 'breadcrumbs.html'%}
-                    </div>
-                {% endif %}
-                {{ body }}
-                {% if not hide_post_content %}
-                    <div class="post-content">{% include 'content-navigation.html'%}</div>
-                {% endif %}
-            </div>
-            <div class="sidebar-left {{'hide-for-large' if full_width}} large-order-1">
-                {% if sidebars != None %}
-                    {% for sidebartemplate in sidebars %}
-                        {% include sidebartemplate %}
-                    {% endfor %}
-                {% endif %}
-            </div>
-            {% if not full_width %}
-                <div class="sidebar-right large-order-3">
-                    {% if not hide_toc %}
-                        {% include 'secondary-side-nav.html' %}
-                    {% endif%}
-                </div>
-            {% endif %}
-        </section>
+        {% if not hide_pre_content %}
+        <div class="pre-content">
+            <div class="pre-content__left">{% include 'breadcrumbs.html'%}</div>
+            <div class="pre-content__right">{% include 'contribute.html' %}</div>
+        </div>
+          {% endif %}
+          {{ body }}
+          {% if not hide_post_content %}
+            <div class="post-content">{% include 'content-navigation.html'%}</div>
+          {% endif %}
+      </div>
+      <div class="sidebar-left {{'hide-for-large' if full_width}} large-order-1">
+          {% if sidebars != None %}
+              {% for sidebartemplate in sidebars %}
+                  {% include sidebartemplate %}
+              {% endfor %}
+          {% endif %}
+      </div>
+      {% if not full_width %}
+          <div class="sidebar-right large-order-3">
+              {% if not hide_toc %}
+                  {% include 'secondary-side-nav.html' %}
+              {% endif%}
+          </div>
+      {% endif %}
+      </section>
 
-        {% include 'footer.html' %}
-
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8P2JP" height="0" width="0"
-                style="display: none; visibility: hidden"></iframe>
-        </noscript>
+      {% include 'footer.html' %}
     </body>
 
     <script src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@latest/dist/cdn/docsearch.min.js"></script>
-  <script>
-    docsearch({
-      container: '#searchcontainer',
-      inputSelector: '#searchbar',
-      typesenseCollectionName: 'start9_docs_03',
-      typesenseServerConfig: { 
-        nodes: [{
-          host: 'start9labs.com',
-          port: '8108',
-          protocol: 'https'
-        }],
-        apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
-      },
-      debug: false,
-    });
-    docsearch({
-      container: '#searchcontainer_sidenav',
-      inputSelector: '#searchbar_sidenav',
-      typesenseCollectionName: 'start9_docs_03',
-      typesenseServerConfig: { 
-        nodes: [{
-          host: 'start9labs.com',
-          port: '8108',
-          protocol: 'https'
-        }],
-        apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
-      },
-      debug: false,
-    });
-  </script>
+    <script>
+      docsearch({
+        container: '#searchcontainer',
+        inputSelector: '#searchbar',
+        typesenseCollectionName: 'start9_docs_03',
+        typesenseServerConfig: { 
+          nodes: [{
+            host: 'start9labs.com',
+            port: '8108',
+            protocol: 'https'
+          }],
+          apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
+        },
+        debug: false,
+      });
+      docsearch({
+        container: '#searchcontainer_sidenav',
+        inputSelector: '#searchbar_sidenav',
+        typesenseCollectionName: 'start9_docs_03',
+        typesenseServerConfig: { 
+          nodes: [{
+            host: 'start9labs.com',
+            port: '8108',
+            protocol: 'https'
+          }],
+          apiKey: 'VrD7bsC566NdpznL5mjl6kzF8g97ZNIm',
+        },
+        debug: false,
+      });
+    </script>
   </body>
 </html>
