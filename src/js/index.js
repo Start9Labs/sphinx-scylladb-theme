@@ -208,64 +208,6 @@ const onScrollHeaderShadow = () => {
   });
 };
 
-const subscriptionEvent = () => {
-  if (document.getElementById("subscribe")) {
-    document.getElementById("subscribe").addEventListener("submit", (e) => {
-      e.preventDefault();
-      var formData = new FormData(e.target);
-      var email = formData.get("email");
-      var body = {
-        customer: {
-          email: email,
-          accepts_marketing: true,
-          verified_email: true,
-        },
-      };
-      fetch("https://start9.com/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(body),
-      })
-        .then(function (response) {
-          if (response.ok) {
-            document.getElementById("subscription_msg").innerHTML =
-              "<p>Thanks for subscribing!</p>";
-            document
-              .getElementById("subscription_msg")
-              .classList.remove("hidden");
-            document.getElementById("newsletter_email").value = "";
-          }
-          return response.json();
-        })
-        .then(function (data) {
-          if (data.errors && data.errors.email) {
-            let msg = "";
-            const err = data.errors.email[0];
-            if (err.includes("has already been taken")) {
-              msg = "Email is already subscribed.";
-            } else if (err.includes("is invalid")) {
-              msg = "Email is invalid.";
-            } else {
-              msg =
-                "Error subscribing to this email. Please try again and contact us if the issue persists.";
-            }
-            throw msg;
-          }
-        })
-        .catch(function (e) {
-          document.getElementById("subscription_msg").innerHTML = `<p>${e}</p>`;
-          document
-            .getElementById("subscription_msg")
-            .classList.remove("hidden");
-          document.getElementById("newsletter_email").value = "";
-          console.warn("Something went wrong: ", e);
-        });
-    });
-  }
-};
-
 $(document).ready(function () {
   createEnlargeImagesButtons();
   $(document).foundation();
@@ -281,6 +223,4 @@ $(document).ready(function () {
   loadCollapsibleNavigation();
   onClickCollapsibleNavigationButton();
   onScrollCollapsibleNavigation();
-  // Subscription event capture
-  subscriptionEvent();
 });
