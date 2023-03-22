@@ -1,0 +1,33 @@
+.sphinx_collapse__label {
+  display: flex !important;
+  flex-direction: row-reverse;
+  font-size: x-large;
+  font-weight: 500;
+  justify-content: flex-end;
+  margin-left: 0 !important;
+}
+
+.sphinx_collapse__icon {
+  border-bottom: 5px solid transparent !important;
+  border-top: 5px solid transparent !important;
+  border-left: 5px solid #000 !important;
+  margin-left: 5px;
+  width: 0;
+  height: 0;
+}
+
+.sphinx_collapse__input:checked~.sphinx_collapse__label,
+.sphinx_collapse__label:hover {
+  color: $color-froly;
+}
+
+.sphinx_collapse__input:checked~.sphinx_collapse__label .sphinx_collapse__icon,
+.sphinx_collapse__label:hover .sphinx_collapse__icon {
+  border-left: 5px solid transparent !important;
+  border-right: 5px solid transparent !important;
+  border-top: 5px solid $color-froly !important;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 0;
+  height: 0;
+}
