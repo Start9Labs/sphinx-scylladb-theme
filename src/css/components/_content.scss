@@ -53,6 +53,10 @@
     scroll-margin-top: calc(#{$header-height} + #{$gap});
   }
 
+  section {
+    scroll-margin-top: calc(#{$header-height} + #{$gap});
+  }
+
   .inline-icon.fa-check {
     color: $color-typography-icon-checkmark;
   }
@@ -118,6 +122,10 @@
       span {
         scroll-margin-top: calc(#{$header-height-large} + #{$gap});
       }
+    }
+
+    section {
+      scroll-margin-top: calc(#{$header-height-large} + #{$gap});
     }
   }
 
