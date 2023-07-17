@@ -6,6 +6,28 @@
   filter: invert(17%) sepia(1%) saturate(0%) hue-rotate(214deg) brightness(88%)
     contrast(81%);
 
+  // logos
+  &--android {
+    background-image: url("../img/icons/logo-android.svg");
+  }
+
+  &--ios {
+    background-image: url("../img/icons/logo-apple-appstore.svg");
+  }
+
+  &--apple {
+    background-image: url("../img/icons/logo-apple.svg");
+  }
+
+  &--linux {
+    background-image: url("../img/icons/logo-tux.svg");
+  }
+
+  &--windows {
+    background-image: url("../img/icons/logo-windows.svg");
+  }
+
+  // icons
   &--apps {
     background-image: url("../img/icons/icon-apps.svg");
   }
