@@ -123,81 +123,7 @@
 
 /*! ./foundation.util.triggers */
 
-/*! /Users/joeworkman/Development/foundation-sites/js/entries/foundation.js */
-
-/*! exports provided: Abide */
-
-/*! exports provided: Accordion */
-
-/*! exports provided: AccordionMenu */
-
-/*! exports provided: Box */
-
-/*! exports provided: Drilldown */
-
-/*! exports provided: Dropdown */
-
-/*! exports provided: DropdownMenu */
-
-/*! exports provided: Equalizer */
-
-/*! exports provided: Foundation */
-
-/*! exports provided: Foundation, CoreUtils, Box, onImagesLoaded, Keyboard, MediaQuery, Motion, Nest, Timer, Touch, Triggers, Abide, Accordion, AccordionMenu, Drilldown, Dropdown, DropdownMenu, Equalizer, Interchange, Magellan, OffCanvas, Orbit, ResponsiveMenu, ResponsiveToggle, Reveal, Slider, SmoothScroll, Sticky, Tabs, Toggler, Tooltip, ResponsiveAccordionTabs, default */
-
-/*! exports provided: Interchange */
-
-/*! exports provided: Keyboard */
-
-/*! exports provided: Magellan */
-
-/*! exports provided: MediaQuery */
-
-/*! exports provided: Move, Motion */
-
-/*! exports provided: Nest */
-
-/*! exports provided: OffCanvas */
-
-/*! exports provided: Orbit */
-
-/*! exports provided: Plugin */
-
-/*! exports provided: Positionable */
-
-/*! exports provided: ResponsiveAccordionTabs */
-
-/*! exports provided: ResponsiveMenu */
-
-/*! exports provided: ResponsiveToggle */
-
-/*! exports provided: Reveal */
-
-/*! exports provided: Slider */
-
-/*! exports provided: SmoothScroll */
-
-/*! exports provided: Sticky */
-
-/*! exports provided: Tabs */
-
-/*! exports provided: Timer */
-
-/*! exports provided: Toggler */
-
-/*! exports provided: Tooltip */
-
-/*! exports provided: Touch */
-
-/*! exports provided: Triggers */
-
-/*! exports provided: onImagesLoaded */
-
-/*! exports provided: rtl, GetYoDigits, RegExpEscape, transitionend, onLoad, ignoreMousedisappear */
-
 /*! jquery */
-
-/*! no static exports found */
 
 /*!*******************************!*\
   !*** ./js/foundation.core.js ***!
@@ -317,10 +243,6 @@
 
 /*!****************************************!*\
   !*** ./js/foundation.util.triggers.js ***!
-  \****************************************/
-
-/*!****************************************!*\
-  !*** multi ./js/entries/foundation.js ***!
   \****************************************/
 
 /*!*****************************************!*\
